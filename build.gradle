@@ -14,8 +14,11 @@ java {
 }
 
 jar {
-    archiveBaseName = 'myapp'
-    archiveVersion = '0.0.1-SNAPSHOT'
+    manifest {
+        attributes(
+                "Main-Class": "org.example.binarytreerest.BinaryTreeRestApplication",
+        )
+    }
 }
 
 configurations {

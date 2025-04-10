@@ -1,6 +1,6 @@
 spring:
   application:
-    name: BinaryTreeRest
+    name: BinaryTreeRests
 
   liquibase:
     change-log: classpath:/db/changelog/db-changelog-master.yaml
@@ -11,7 +11,7 @@ spring:
     database: postgresql
 
   datasource:
-    url: postgresql://binary-db:5432/BinaryTree
+    url: jdbc:postgresql://binary-db:5432/BinaryTree
     username: postgres
     password: postgres
 

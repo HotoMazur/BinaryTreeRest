@@ -8,5 +8,5 @@ RUN gradle clean build -x test
 
 FROM eclipse-temurin:23-jre-ubi9-minimal
 WORKDIR /app
-COPY --from=build /app/target/*.jar app.jar
+COPY --from=build /app/build/libs/*.jar app.jar
 CMD ["java", "-jar", "app.jar"]
