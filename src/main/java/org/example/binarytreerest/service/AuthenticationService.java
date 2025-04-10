@@ -29,7 +29,8 @@ public class AuthenticationService {
     }
 
     public UserEntity signup(RegisterUserDto input) {
-        UserEntity user = new UserEntity(input.getFullName(), input.getEmail(), input.getPassword());
+        String hashedPassword = passwordEncoder.encode(input.getPassword());
+        UserEntity user = new UserEntity(input.getFullName(), input.getEmail(), hashedPassword);
 
         return userRepository.save(user);
     }
