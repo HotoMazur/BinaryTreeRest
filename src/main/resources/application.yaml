@@ -1,6 +1,6 @@
 spring:
   application:
-    name: BinaryTreeRest
+    name: BinaryTreeRests
 
   liquibase:
     change-log: classpath:/db/changelog/db-changelog-master.yaml
